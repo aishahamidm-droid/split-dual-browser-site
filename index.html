@@ -1,125 +1,350 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Split Dual Browser is a mobile multitasking browser that keeps two web views visible in one focused workspace." />
   <title>Split Dual Browser | Locked Edition</title>
-  <script type="module" crossorigin src="./assets/index-HSC4GujX.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-CLgLgrBl.css">
+  <script type="module" crossorigin src="./assets/index-Cu4iKx0G.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-Ds_2_Mju.css">
 </head>
-<body class="locked">
+
+<body>
   <canvas id="bg"></canvas>
+
+  <header class="siteHeader">
+    <div class="leftHeaderBtns">
+      <button class="contactBtn" id="openContact" type="button">Contact</button>
+      <button class="aboutBtn" id="openAbout" type="button">About</button>
+    </div>
+
+    <a
+      class="playStoreBtn headerPlayBtn"
+      href="https://play.google.com/store/apps/details?id=com.azg.splitlauncher"
+      target="_blank"
+      rel="noopener"
+      aria-label="Get Split Dual Browser on Google Play"
+    >
+      <span class="playIcon" aria-hidden="true"></span>
+      <span>Google Play</span>
+    </a>
+
+    <div class="headerInner">
+      <div class="brand">Split Dual Browser</div>
+      <nav class="nav">
+        <a href="#tab1">Tab 1</a>
+        <a href="#tab2">Tab 2</a>
+        <a href="#tab3">Tab 3</a>
+        <a href="#tab4">Tab 4</a>
+      </nav>
+    </div>
+  </header>
+
   <div class="overlay" id="overlay">
-    <div class="overlayCard">
-      <div class="brandLogo">S</div>
-      <h2>Split Dual Browser</h2>
-      <button class="startBtn" id="startBtn">INITIALIZE SYSTEM</button>
-    </div>
-  </div>
-  <div class="phoneStage">
-    <div class="phoneCard" id="phoneCard">
-      <div class="phoneBezel">
-        <div class="phoneGlass">
-         <div class="phoneTopTabs">
-  <button class="tab" data-mode="study">Tab1</button>
-  <button class="tab" data-mode="social">Tab2</button>
-  <button class="tab" data-mode="work">Tab3</button>
-</div>
-          <div class="phoneScreen">
-            <div class="screenSlider" id="screenSlider">
+    <div class="bootTech"></div>
+    <div class="bootCircuits"></div>
+    <div class="bootParticles"></div>
 
-  <!-- STUDY -->
-  <div class="appView">
-    <div class="browserHalf">
-      <div class="urlBar">https://khanacademy.org</div>
-      <img src="previews/khan.png" class="previewSite" />
-    </div>
+    <div class="overlayCard overlayBoot">
+      <div class="bootIconWrap">
+        <img src="./split.png" alt="Split App Icon" class="bootIcon" />
+        <div class="bootGlow"></div>
+      </div>
 
-    <div class="browserHalf">
-      <div class="urlBar">https://masterclass.com</div>
-      <img src="previews/masterclass.png" class="previewSite" />
+      <h2 class="overlayTitle bootTitle">Split Dual Browser</h2>
+      <p class="overlaySub bootSub">Two web views. One focused workflow.</p>
+
+      <div class="bootLines" id="bootLines">
+        <div class="bootLine" data-step="1">Initializing Split Engine<span class="dots"></span></div>
+        <div class="bootLine" data-step="2">Loading browser modules<span class="dots"></span></div>
+        <div class="bootLine" data-step="3">Preparing dual interface<span class="dots"></span></div>
+        <div class="bootLine ok" data-step="4">System ready ✓</div>
+      </div>
+
+      <div class="bootHint">Loading interface...</div>
     </div>
   </div>
 
-  <!-- SOCIAL -->
-  <div class="appView">
-    <div class="browserHalf">
-      <div class="urlBar">https://instagram.com</div>
-      <img src="previews/instagram.png" class="previewSite" />
+  <main class="page">
+    <div class="exampleNote">
+      <span class="noteLabel">N/B</span>
+      <span class="noteText">
+        The layouts shown below are examples. Each tab can be used for work, social,
+        study, notes, video, or any mix that fits your workflow.
+      </span>
     </div>
 
-    <div class="browserHalf">
-      <div class="urlBar">https://canva.com</div>
-      <img src="previews/canva.png" 
-      class="previewSite" />
-    </div>
-  </div>
+    <section class="featureStrip" aria-label="Split Dual Browser features">
+      <article class="featurePill">
+        <span class="featureNumber">01</span>
+        <strong>Dual web views</strong>
+        <p>Run two pages at once in portrait or landscape.</p>
+      </article>
+      <article class="featurePill">
+        <span class="featureNumber">02</span>
+        <strong>Saved workspaces</strong>
+        <p>Switch between tab setups without rebuilding your flow.</p>
+      </article>
+      <article class="featurePill">
+        <span class="featureNumber">03</span>
+        <strong>Built-in tools</strong>
+        <p>Use quick notes, video shortcuts, themes, and split controls.</p>
+      </article>
+    </section>
 
-  <!-- WORK -->
-  <div class="appView">
-    <div class="browserHalf">
-      <div class="urlBar">https://word.cloud.microsoft</div>
-      <img src="previews/word.png" class="previewSite" />
-    </div>
+    <section id="tab1" class="panel">
+      <div class="panelCover"></div>
+      <div class="panelInner">
+        <div class="textBlock">
+          <div class="kicker">Study Mode</div>
+          <h1>Tab1</h1>
+          <p>
+            Tab1 helps you learn faster by keeping a lesson on one side while you take notes or research on the other.
+            Everything stays visible at the same time, so you stay focused.
+          </p>
+          <div class="actions">
+            <button class="rotateBtn" type="button" data-rotate="tab1" aria-label="Rotate phone">↻ Rotate</button>
+            <div class="hint">Portrait = top/bottom · Landscape = left/right</div>
+          </div>
+        </div>
 
-    <div class="browserHalf">
-      <div class="urlBar">https://gmail.com</div>
-      <img src="previews/gmail.png" class="previewSite" />
-    </div>
-  </div>
-
-</div>
+        <div class="phoneSlot">
+          <div class="phoneCard parallaxPhone" data-phone="tab1">
+            <div class="phoneBezel">
+              <div class="phoneGlass" style="--shot:url('previews/tab1-app.jpg'); --shot-land:url('previews/tab1-landscape.jpg')">
+                <img src="./previews/tab1-app.jpg" class="appScreenshot" alt="Split Dual Browser Tab 1 showing Khan Academy and W3Schools" />
+                <div class="landscapeSplit" aria-hidden="true">
+                  <div class="landscapePane landscapeTop"></div>
+                  <div class="landscapeDivider"></div>
+                  <div class="landscapePane landscapeBottom"></div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+    </section>
+
+    <section id="tab2" class="panel panelReverse">
+      <div class="panelCover"></div>
+      <div class="panelInner">
+        <div class="textBlock">
+          <div class="kicker">Social + Productivity</div>
+          <h1>Tab2</h1>
+          <p>
+            Tab2 is for multitasking: social on one side, tools on the other. Chat, post, design, or collaborate without
+            switching apps.
+          </p>
+          <div class="actions">
+            <button class="rotateBtn" type="button" data-rotate="tab2" aria-label="Rotate phone">↻ Rotate</button>
+            <div class="hint">Portrait = top/bottom · Landscape = left/right</div>
+          </div>
+        </div>
+
+        <div class="phoneSlot">
+          <div class="phoneCard parallaxPhone" data-phone="tab2">
+            <div class="phoneBezel">
+              <div class="phoneGlass" style="--shot:url('previews/tab2-app.jpg'); --shot-land:url('previews/tab2-landscape.jpg')">
+                <img src="./previews/tab2-app.jpg" class="appScreenshot" alt="Split Dual Browser Tab 2 showing Gmail and Canvas" />
+                <div class="landscapeSplit" aria-hidden="true">
+                  <div class="landscapePane landscapeTop"></div>
+                  <div class="landscapeDivider"></div>
+                  <div class="landscapePane landscapeBottom"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="tab3" class="panel">
+      <div class="panelCover"></div>
+      <div class="panelInner">
+        <div class="textBlock">
+          <div class="kicker">Work Mode</div>
+          <h1>Tab3</h1>
+          <p>
+            Tab3 is built for work. Keep documents and email side-by-side to respond, review, and organize faster.
+          </p>
+          <div class="actions">
+            <button class="rotateBtn" type="button" data-rotate="tab3" aria-label="Rotate phone">↻ Rotate</button>
+            <div class="hint">Portrait = top/bottom · Landscape = left/right</div>
+          </div>
+        </div>
+
+        <div class="phoneSlot">
+          <div class="phoneCard parallaxPhone" data-phone="tab3">
+            <div class="phoneBezel">
+              <div class="phoneGlass" style="--shot:url('previews/tab3-app.jpg'); --shot-land:url('previews/tab3-landscape.jpg')">
+                <img src="./previews/tab3-app.jpg" class="appScreenshot" alt="Split Dual Browser Tab 3 showing Netflix and Crunchyroll" />
+                <div class="landscapeSplit" aria-hidden="true">
+                  <div class="landscapePane landscapeTop"></div>
+                  <div class="landscapeDivider"></div>
+                  <div class="landscapePane landscapeBottom"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="tab4" class="panel panelReverse">
+      <div class="panelCover"></div>
+      <div class="panelInner">
+        <div class="textBlock">
+          <div class="kicker">Notes + Media</div>
+          <h1>Tab4</h1>
+          <p>
+            Tab4 shows the personal toolkit side of Split: keep a video, reference page, or web app open while your notes stay ready in the second pane.
+          </p>
+          <div class="actions">
+            <button class="rotateBtn" type="button" data-rotate="tab4" aria-label="Rotate phone">↻ Rotate</button>
+            <div class="hint">Portrait = top/bottom · Landscape = left/right</div>
+          </div>
+        </div>
+
+        <div class="phoneSlot">
+          <div class="phoneCard parallaxPhone" data-phone="tab4">
+            <div class="phoneBezel">
+              <div class="phoneGlass" style="--shot:url('previews/tab4-app.jpg'); --shot-land:url('previews/tab4-landscape.jpg')">
+                <img src="./previews/tab4-app.jpg" class="appScreenshot" alt="Split Dual Browser Tab 4 showing YouTube and TikTok" />
+                <div class="landscapeSplit" aria-hidden="true">
+                  <div class="landscapePane landscapeTop"></div>
+                  <div class="landscapeDivider"></div>
+                  <div class="landscapePane landscapeBottom"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="siteFooter">
+    <div class="siteFooterInner">
+      <p class="copyright">© <span id="year"></span> Split Dual Browser</p>
+      <div class="socialFollow" aria-label="Follow Split Dual Browser on social media">
+        <span class="followLabel">Follow us</span>
+        <div class="socialLinks">
+          <a
+            class="socialLink instagram"
+            href="https://www.instagram.com/azg.group?igsh=MXU3aWtlc2o1MncxYg=="
+            target="_blank"
+            rel="noopener"
+            aria-label="Follow AZG Group on Instagram"
+          >
+            <img class="socialIcon" src="https://cdn.simpleicons.org/instagram/ffffff" alt="" aria-hidden="true" />
+          </a>
+          <a
+            class="socialLink linkedin"
+            href="https://www.linkedin.com/in/aisha-mohamed-056a5b156"
+            target="_blank"
+            rel="noopener"
+            aria-label="Follow Aisha Mohamed on LinkedIn"
+          >
+            <span class="socialIcon linkedinIcon" aria-hidden="true">in</span>
+          </a>
+          <a
+            class="socialLink tiktok"
+            href="https://www.tiktok.com/@azg.group?_r=1&amp;_t=ZS-97wSagTsbq8"
+            target="_blank"
+            rel="noopener"
+            aria-label="Follow AZG Group on TikTok"
+          >
+            <img class="socialIcon" src="https://cdn.simpleicons.org/tiktok/ffffff" alt="" aria-hidden="true" />
+          </a>
+          <a
+            class="socialLink facebook"
+            href="https://www.facebook.com/share/1C7VNET698/"
+            target="_blank"
+            rel="noopener"
+            aria-label="Follow AZG Group on Facebook"
+          >
+            <img class="socialIcon" src="https://cdn.simpleicons.org/facebook/ffffff" alt="" aria-hidden="true" />
+          </a>
+        </div>
+      </div>
+      <div class="footerLinks">
+        <a
+          class="playStoreBtn footerPlayBtn"
+          href="https://play.google.com/store/apps/details?id=com.azg.splitlauncher"
+          target="_blank"
+          rel="noopener"
+          aria-label="Get Split Dual Browser on Google Play"
+        >
+          <span class="playIcon" aria-hidden="true"></span>
+          <span>Google Play</span>
+        </a>
+        <a href="./privacy.html">Privacy Policy</a>
+        <button id="openSubscribe" type="button">Subscribe</button>
+      </div>
+    </div>
+  </footer>
+
+  <div class="contactOverlay" id="contactOverlay">
+    <div class="contactCard" role="dialog" aria-modal="true" aria-labelledby="contactTitle">
+      <h2 id="contactTitle">Contact Us</h2>
+      <form id="contactForm" action="https://formspree.io/f/xpqjvedd" method="POST">
+        <input type="email" name="email" placeholder="Your email" required />
+        <textarea name="message" placeholder="Write your message..." required></textarea>
+        <div class="contactActions">
+          <button type="submit" id="sendBtn">Send Message</button>
+          <button type="button" id="closeContact">Cancel</button>
+        </div>
+        <p id="contactStatus" style="margin-top:12px;font-size:14px;opacity:.85;"></p>
+      </form>
     </div>
   </div>
-  <main class="page">
 
-  <!-- TAB 1 -->
-  <section class="section" data-mode="study" data-side="right" data-step="1">
-    <div class="wrapText">
-      <h2>Tab1</h2>
+  <div class="aboutOverlay" id="aboutOverlay">
+    <div class="aboutCard" role="dialog" aria-modal="true" aria-labelledby="aboutTitle">
+      <h2 id="aboutTitle">About Split Dual Browser</h2>
       <p>
-        Tab1 allows you to improve learning efficiency by viewing lessons,
-        tutorials, or lectures on one side while taking notes or researching
-        on the other. This split layout keeps study materials and supporting
-        information visible at the same time, helping you stay focused and
-        reduce interruptions during learning sessions.
+        Split Dual Browser is a concept designed to make multitasking on mobile
+        simpler and more efficient by allowing two web views to run side-by-side
+        in a single browser environment.
       </p>
+      <p>
+        The goal is to eliminate constant switching between apps or tabs,
+        allowing users to study, work, research, or communicate more efficiently.
+      </p>
+      <p>
+        Split Dual Browser is developed under <strong>AZG Group</strong>.
+        The project is independently created and operated by its founder
+        <strong>Aisha Hamid Mohamed</strong>
+        <span style="opacity:.7;">(Pen name: Aisha Z)</span>.
+      </p>
+      <p>
+        For more information about the company and its projects,
+        please visit the AZG Group page.
+      </p>
+      <div class="aboutActions">
+        <a href="#" id="visitAZG">Visit AZG Group</a>
+        <button id="closeAbout" type="button">Close</button>
+      </div>
     </div>
-  </section>
+  </div>
 
-  <!-- TAB 2 -->
-  <section class="section" data-mode="social" data-side="left" data-step="2">
-    <div class="wrapText">
-      <h2>Tab2</h2>
-      <p>
-        Tab2 enables you to stay connected while multitasking by viewing your
-        social platforms alongside productivity tools. You can interact,
-        communicate, or collaborate in real time while keeping track of your
-        ongoing tasks without switching between different applications.
+  <div class="subscribeOverlay" id="subscribeOverlay">
+    <div class="subscribeCard" role="dialog" aria-modal="true" aria-labelledby="subscribeTitle">
+      <h2 id="subscribeTitle">Subscribe for Updates</h2>
+      <p style="margin:0 0 14px; opacity:.85;">
+        Get updates about Split Dual Browser releases and new features.
       </p>
+      <form id="subscribeForm" action="https://formspree.io/f/xpqjvedd" method="POST">
+        <input type="hidden" name="_subject" value="Split Dual Browser - New Subscriber" />
+        <input type="email" name="email" placeholder="Your email" required />
+        <div class="subscribeActions">
+          <button type="submit" id="subscribeSendBtn">Subscribe</button>
+          <button type="button" id="closeSubscribe">Cancel</button>
+        </div>
+        <p id="subscribeStatus" style="margin-top:12px;font-size:14px;opacity:.85;"></p>
+      </form>
     </div>
-  </section>
+  </div>
 
-  <!-- TAB 3 -->
-  <section class="section" data-mode="work" data-side="right" data-step="3">
-    <div class="wrapText">
-      <h2>Tab3</h2>
-      <p>
-        Tab3 is designed for workflow management by allowing you to monitor
-        documents, emails, or online dashboards side-by-side. This makes it
-        easier to respond, review, and organize information simultaneously,
-        improving productivity during professional tasks.
-      </p>
-    </div>
-  </section>
-<div style="text-align:center; margin-top:40px;">
-  <a href="./privacy.html" 
-     style="color:#4da3ff; text-decoration:none; font-size:14px;">
-     Privacy Policy
-  </a>
-</div>
-</main>
 </body>
 </html>
