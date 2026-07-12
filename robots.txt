@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://splitdualbrowser.netlify.app/sitemap.xml
